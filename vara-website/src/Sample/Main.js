@@ -19,18 +19,12 @@ class Main extends Component {
 							</NavLink>{" "}
 						</li>{" "}
 						<li>
-							<NavLink
-								exact
-								to="/sample/stuff"
-							>
+							<NavLink to="/sample/stuff">
 								Stuff{" "}
 							</NavLink>{" "}
 						</li>{" "}
 						<li>
-							<NavLink
-								exact
-								to="/sample/contact"
-							>
+							<NavLink to="/sample/contact">
 								Contact{" "}
 							</NavLink>{" "}
 						</li>{" "}
