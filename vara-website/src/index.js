@@ -1,14 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import Header from "./Header";
+import Footer from "./Footer";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Header />
+	</React.StrictMode>,
+	document.getElementById("header"),
+);
+ReactDOM.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
+	document.getElementById("root"),
+);
+
+ReactDOM.render(
+	<React.StrictMode>
+		<Footer />
+	</React.StrictMode>,
+	document.getElementById("footer"),
 );
 
 // If you want your app to work offline and load faster, you can change
