@@ -1,2 +1,7 @@
 node_modules
 package-lock.json
+.idea/.gitignore
+.idea/modules.xml
+.idea/VARA-Website.iml
+.idea/vcs.xml
+.idea/codeStyles/Project.xml
