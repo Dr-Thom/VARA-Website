@@ -7,11 +7,10 @@ import VaraName from "../Images/vara_name.png";
 
 class Main extends Component {
 	render() {
-		let varaName = "/src/Images/vara_name.png";
 		return (
 			<HashRouter>
 				<div>
-					<img src={VaraName} />{" "}
+					<img src={VaraName} alt="" />{" "}
 					<h1> Simple SPA </h1>{" "}
 					<ul className="header">
 						<li>
