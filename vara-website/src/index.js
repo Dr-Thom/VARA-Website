@@ -4,8 +4,15 @@ import "./index.css";
 import App from "./App";
 import Header from "./Header";
 import Footer from "./Footer";
+import Main from "./Sample/Main";
 import * as serviceWorker from "./serviceWorker";
 
+ReactDOM.render(
+	<React.StrictMode>
+		<Main />
+	</React.StrictMode>,
+	document.getElementById("main"),
+);
 ReactDOM.render(
 	<React.StrictMode>
 		<Header />
