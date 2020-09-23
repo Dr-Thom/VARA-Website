@@ -10,21 +10,30 @@ import VaraName from "../Images/vara_name.png";
 class Main extends Component {
 
     render() {
+		const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
         return (
 			<HashRouter>
             <div className="content">
-				<ul className = "Header">
-					<li><NavLink exact to = "/">Home</NavLink></li>
-					<li><NavLink to = "/sample/stuff">Stuff</NavLink></li>
-					<li><NavLink to = "/sample/contact">Contact</NavLink></li>
-				 </ul>
-				<div className = "content" >
-            		<Route exact path = "/" component = { Home }/>
-					<Route exact path = "/sample/stuff" component = { Stuff }/>
-					<Route exact path = "/sample/contact" component = { Contact }/>
-				</div>
+			<Nav className="justify-content-center" activeKey="/home">
+			   <Nav.Item>
+				   <Nav.Link eventKey="1" className="Header" href="#/">Home</Nav.Link>
+			   </Nav.Item>
+			   <Nav.Item>
+				   <Nav.Link eventKey="2" className="Header" href="#/sample/stuff">Stuff</Nav.Link>
+			   </Nav.Item>
+			   <Nav.Item>
+				   <Nav.Link eventKey="3" className="Header" href="#/sample/contact">Contact</Nav.Link>
+			   </Nav.Item>
+			</Nav>
+
+			</div>
+			<div className = "content" >
+				<Route exact path = "/" component = { Home }/>
+				<Route exact path = "/sample/stuff" component = { Stuff }/>
+				<Route exact path = "/sample/contact" component = { Contact }/>
 			</div>
 			</HashRouter>
+
         );
     }
 }

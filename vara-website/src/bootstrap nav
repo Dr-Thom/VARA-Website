@@ -11,3 +11,16 @@ const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 	   <Nav.Link eventKey="3" className="Header" href="#/sample/contact">Contact</Nav.Link>
    </Nav.Item>
 </Nav>
+
+regular html nav
+
+<ul className = "Header">
+	<li><NavLink exact to = "/">Home</NavLink></li>
+	<li><NavLink to = "/sample/stuff">Stuff</NavLink></li>
+	<li><NavLink to = "/sample/contact">Contact</NavLink></li>
+ </ul>
+<div className = "content" >
+	<Route exact path = "/" component = { Home }/>
+	<Route exact path = "/sample/stuff" component = { Stuff }/>
+	<Route exact path = "/sample/contact" component = { Contact }/>
+</div>
