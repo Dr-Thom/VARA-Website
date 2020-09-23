@@ -5,3 +5,4 @@ package-lock.json
 .idea/VARA-Website.iml
 .idea/vcs.xml
 .idea/codeStyles/Project.xml
+vara-website/package.json
