@@ -9,19 +9,21 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
-    <React.StrictMode >
-    <Main / >
-    </React.StrictMode>,
-    document.getElementById("main"),
-);
-
-/*ReactDOM.render(
 	<React.StrictMode>
     <Header />
     </React.StrictMode>,
     document.getElementById("header"),
 );
+
 ReactDOM.render(
+    <React.StrictMode>
+    <Main / >
+    </React.StrictMode>,
+    document.getElementById("main"),
+);
+
+
+/*ReactDOM.render(
 	<React.StrictMode>
     <App />
     </React.StrictMode>,
