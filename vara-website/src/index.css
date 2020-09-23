@@ -1,5 +1,6 @@
-body {
-	background-color: #ffcc00;
+/*body {
+	background-color: black;
+	color:blue;
 	padding: 20px;
 	margin: 0;
 }
@@ -10,9 +11,28 @@ p,
 ul,
 li {
 	font-family: sans-serif;
+}*/
+
+.Header {
+	color: deeppink;
+	background-color: black ;
+	padding: 0;
 }
 
-ul.header li {
+.Header li {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+}
+.Header li a{
+	color: deeppink;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 20px;
+	display: inline-block;
+}
+
+/*ul.header li {
 	display: inline;
 	list-style-type: none;
 	margin: 0;
@@ -29,9 +49,9 @@ ul.header li a {
 	text-decoration: none;
 	padding: 20px;
 	display: inline-block;
-}
+}*/
 
-.content {
+/*.content {
 	background-color: #fff;
 	padding: 20px;
 }
@@ -43,8 +63,8 @@ ul.header li a {
 
 .content li {
 	margin-bottom: 10px;
-}
+}*/
 
 .active {
-	background-color: #0099ff;
+	background-color: lightpink;
 }

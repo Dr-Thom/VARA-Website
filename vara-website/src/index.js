@@ -6,31 +6,35 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Sample/Main";
 import * as serviceWorker from "./serviceWorker";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Main />
-	</React.StrictMode>,
-	document.getElementById("main"),
-);
-ReactDOM.render(
-	<React.StrictMode>
-		<Header />
-	</React.StrictMode>,
-	document.getElementById("header"),
-);
-ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById("root"),
+    <Header />
+    </React.StrictMode>,
+    document.getElementById("header"),
 );
 
 ReactDOM.render(
+    <React.StrictMode>
+    <Main / >
+    </React.StrictMode>,
+    document.getElementById("main"),
+);
+
+
+/*ReactDOM.render(
 	<React.StrictMode>
-		<Footer />
-	</React.StrictMode>,
-	document.getElementById("footer"),
+    <App />
+    </React.StrictMode>,
+    document.getElementById("root"),
+);*/
+
+ReactDOM.render(
+	<React.StrictMode >
+    <Footer />
+    </React.StrictMode>,
+    document.getElementById("footer"),
 );
 
 // If you want your app to work offline and load faster, you can change
