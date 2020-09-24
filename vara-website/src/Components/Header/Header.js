@@ -1,5 +1,5 @@
 import React from "react";
-import VaraLogo from "../../Images/vara_logo.png";
+import VaraCar from "../../Images/vara_car.png";
 import VaraName from "./../../Images/vara_name.png";
 import "../../Not_Used/App.css";
 
