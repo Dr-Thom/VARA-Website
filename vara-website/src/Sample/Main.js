@@ -14,7 +14,7 @@ class Main extends Component {
         return (
 			<HashRouter>
             <div className="content">
-			<Nav className="justify-content-center" activeKey="/home">
+			<Nav className="justify-content-center" activeKey="#/" onSelect={(selectedKey) => click(`${selectedKey}`)}>
 			   <Nav.Item>
 				   <Nav.Link eventKey="1" className="Header" href="#/">Home</Nav.Link>
 			   </Nav.Item>
@@ -36,6 +36,10 @@ class Main extends Component {
 
         );
     }
+
+	}
+	function click(selected : int){
+		alert("wuz up " + selected);
 }
 
 export default Main;
