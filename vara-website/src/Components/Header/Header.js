@@ -1,7 +1,7 @@
 import React from "react";
-import VaraCar from "./Images/vara_car.png";
-import VaraName from "./Images/vara_name.png";
-import "./App.css";
+import VaraLogo from "../../Images/vara_logo.png";
+import VaraName from "./../../Images/vara_name.png";
+import "../../Not_Used/App.css";
 
 function Header() {
     return (
