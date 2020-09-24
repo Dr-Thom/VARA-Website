@@ -40,7 +40,7 @@ constructor(props){
 
 			<Button onClick={() => clickedWhat()}>what?</Button>
 
-			<button onClick={() => click("click")}>what2</button>
+			<button class="btn btn-danger" onClick={() => click("click")}>what2</button>
 			</HashRouter>
         );
     }
