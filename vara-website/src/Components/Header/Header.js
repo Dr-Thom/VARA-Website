@@ -1,14 +1,15 @@
 import React from "react";
-import VaraLogo from "./Images/vara_logo.png";
-import "./App.css";
+import VaraLogo from "../../Images/vara_logo.png";
+
+
 
 function Header() {
 	return (
-		<div className="App">
-			<header className="App-header">
+		<div className="">
+			<header className="">
 				<img
 					src={VaraLogo}
-					className="App-logo"
+					className=""
 					alt="logo"
 				/>
 				<p> example header file </p>{" "}
