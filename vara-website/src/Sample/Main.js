@@ -15,13 +15,13 @@ class Main extends Component {
             <div className="content">
 			<Nav className="justify-content-center" activeKey="#/" onSelect={(selectedKey) => click(`${selectedKey}`)}>
 			   <Nav.Item>
-				   <Nav.Link eventKey="1" className="Header" href="#/">Home</Nav.Link>
+				   <Nav.Link eventKey="Home" className="Header" href="#/">Home</Nav.Link>
 			   </Nav.Item>
 			   <Nav.Item>
-				   <Nav.Link eventKey="2" className="Header" href="#/sample/stuff">Stuff</Nav.Link>
+				   <Nav.Link eventKey="Stuff" className="Header" href="#/sample/stuff">Stuff</Nav.Link>
 			   </Nav.Item>
 			   <Nav.Item>
-				   <Nav.Link eventKey="3" className="Header" href="#/sample/contact">Contact</Nav.Link>
+				   <Nav.Link eventKey="Contact" className="Header" href="#/sample/contact">Contact</Nav.Link>
 			   </Nav.Item>
 			</Nav>
 

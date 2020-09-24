@@ -51,10 +51,11 @@ ul.header li a {
 	display: inline-block;
 }*/
 
-/*.content {
-	background-color: #fff;
+.content {
+	background-color: white;
 	padding: 20px;
 }
+/*
 
 .content h2 {
 	padding: 0;
