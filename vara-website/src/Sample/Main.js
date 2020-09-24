@@ -10,7 +10,6 @@ import VaraName from "../Images/vara_name.png";
 class Main extends Component {
 
     render() {
-		const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
         return (
 			<HashRouter>
             <div className="content">
