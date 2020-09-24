@@ -10,19 +10,18 @@ import VaraName from "../Images/vara_name.png";
 
 class Main extends Component {
 
+
 constructor(props){
 	super(props);
-	//this.click = this.click.Bind(this);
+	//this.click = this.click.bind(this);
 }
 
     render() {
-		//const [myState, setMyState] = React.useState(0);
+
 		  const callbackFunc = () => {
-		    console.log("Logged");
-			//alert("something");
-			click(1);
-		    //setMyState(2);
-		  }
+				clickedWhat();
+			}
+
         return (
 			<HashRouter>
             <div className="content">
@@ -48,15 +47,18 @@ constructor(props){
 
 			<Button onClick={callbackFunc}>what?</Button>
 			</HashRouter>
-
         );
-
-
     }
 
+
+
+
 	}
-	function click (selected : int) {
-		alert("wuz up " + selected);
-}
+	function clickedWhat(){
+		alert("clicked on What? Button");
+	}
+ 	function click (selected : int) {
+			alert("wuz up " + selected);
+	}
 
 export default Main;
