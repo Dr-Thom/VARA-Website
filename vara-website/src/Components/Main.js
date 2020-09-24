@@ -15,13 +15,13 @@ class Main extends Component {
             <div className="content">
 				<ul className = "Header">
 					<li><NavLink exact to = "/">Home</NavLink></li>
-					<li><NavLink to = "/sample/stuff">Stuff</NavLink></li>
-					<li><NavLink to = "/sample/contact">Contact</NavLink></li>
+					<li><NavLink to = "/Stuff">Stuff</NavLink></li>
+					<li><NavLink to = "/Contact">Contact</NavLink></li>
 				 </ul>
 				<div className = "content" >
             		<Route exact path = "/" component = { Home }/>
-					<Route exact path = "/sample/stuff" component = { Stuff }/>
-					<Route exact path = "/sample/contact" component = { Contact }/>
+					<Route exact path = "/Stuff" component = { Stuff }/>
+					<Route exact path = "/Contact" component = { Contact }/>
 				</div>
 			</div>
 			</HashRouter>
