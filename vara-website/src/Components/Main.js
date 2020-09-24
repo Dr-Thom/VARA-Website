@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import Home from "./Home";
 import Stuff from "./Stuff";
@@ -9,7 +10,19 @@ import VaraName from "../Images/vara_name.png";
 
 class Main extends Component {
 
+constructor(props){
+	super(props);
+	//this.click = this.click.Bind(this);
+}
+
     render() {
+		//const [myState, setMyState] = React.useState(0);
+		  const callbackFunc = () => {
+		    console.log("Logged");
+			//alert("something");
+			click(1);
+		    //setMyState(2);
+		  }
         return (
 			<HashRouter>
             <div className="content">
@@ -18,26 +31,31 @@ class Main extends Component {
 				   <Nav.Link eventKey="Home" className="Header" href="#/">Home</Nav.Link>
 			   </Nav.Item>
 			   <Nav.Item>
-				   <Nav.Link eventKey="Stuff" className="Header" href="#/sample/stuff">Stuff</Nav.Link>
+				   <Nav.Link eventKey="Stuff" className="Header" href="#/Stuff">Stuff</Nav.Link>
 			   </Nav.Item>
 			   <Nav.Item>
-				   <Nav.Link eventKey="Contact" className="Header" href="#/sample/contact">Contact</Nav.Link>
+				   <Nav.Link eventKey="Contact" className="Header" href="#/Contact">Contact</Nav.Link>
 			   </Nav.Item>
 			</Nav>
 
 			</div>
 			<div className = "content" >
+
 				<Route exact path = "/" component = { Home }/>
-				<Route exact path = "/sample/stuff" component = { Stuff }/>
-				<Route exact path = "/sample/contact" component = { Contact }/>
+				<Route exact path = "/Stuff" component = { Stuff }/>
+				<Route exact path = "/Contact" component = { Contact }/>
 			</div>
+
+			<Button onClick={callbackFunc}>what?</Button>
 			</HashRouter>
 
         );
+
+
     }
 
 	}
-	function click(selected : int){
+	function click (selected : int) {
 		alert("wuz up " + selected);
 }
 
