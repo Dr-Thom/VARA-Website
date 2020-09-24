@@ -25,18 +25,11 @@ constructor(props){
         return (
 			<HashRouter>
             <div className="content">
-			<Nav className="justify-content-center" activeKey="#/" onSelect={(selectedKey) => click(`${selectedKey}`)}>
-			   <Nav.Item>
-				   <Nav.Link eventKey="Home" className="Header" href="#/">Home</Nav.Link>
-			   </Nav.Item>
-			   <Nav.Item>
-				   <Nav.Link eventKey="Stuff" className="Header" href="#/Stuff">Stuff</Nav.Link>
-			   </Nav.Item>
-			   <Nav.Item>
-				   <Nav.Link eventKey="Contact" className="Header" href="#/Contact">Contact</Nav.Link>
-			   </Nav.Item>
-			</Nav>
-
+			<ul className = "Header">
+				<li><NavLink onClick={() => click("click")} exact to = "/">Home</NavLink></li>
+				<li><NavLink to = "/Stuff">Stuff</NavLink></li>
+				<li><NavLink to = "/Contact">Contact</NavLink></li>
+			 </ul>
 			</div>
 			<div className = "content" >
 
@@ -45,7 +38,9 @@ constructor(props){
 				<Route exact path = "/Contact" component = { Contact }/>
 			</div>
 
-			<Button onClick={callbackFunc}>what?</Button>
+			<Button onClick={() => clickedWhat()}>what?</Button>
+
+			<button onClick={() => click("click")}>what2</button>
 			</HashRouter>
         );
     }
@@ -57,7 +52,7 @@ constructor(props){
 	function clickedWhat(){
 		alert("clicked on What? Button");
 	}
- 	function click (selected : int) {
+ 	function click (selected : string) {
 			alert("wuz up " + selected);
 	}
 

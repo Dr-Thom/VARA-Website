@@ -1,0 +1,11 @@
+<Nav className="justify-content-center" activeKey="#/" onSelect={(selectedKey) => click(`${selectedKey}`)}>
+   <Nav.Item>
+	   <Nav.Link eventKey="Home" className="Header" href="#/">Home</Nav.Link>
+   </Nav.Item>
+   <Nav.Item>
+	   <Nav.Link eventKey="Stuff" className="Header" href="#/Stuff">Stuff</Nav.Link>
+   </Nav.Item>
+   <Nav.Item>
+	   <Nav.Link eventKey="Contact" className="Header" href="#/Contact">Contact</Nav.Link>
+   </Nav.Item>
+</Nav>
