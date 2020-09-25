@@ -7,6 +7,8 @@ import Home from "./Home";
 import Stuff from "./Stuff";
 import Contact from "./Contact";
 import VaraName from "../Images/vara_name.png";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 
 class Main extends Component {
 
@@ -25,17 +27,21 @@ constructor(props){
         return (
 			<HashRouter>
             <div className="content">
-			<ul className = "Header">
-				<li><NavLink onClick={() => click("click")} exact to = "/">Home</NavLink></li>
-				<li><NavLink to = "/Stuff">Stuff</NavLink></li>
-				<li><NavLink to = "/Contact">Contact</NavLink></li>
-			 </ul>
-			</div>
-			<div className = "content" >
+				<ul className = "Header">
+					<li><NavLink onClick={() => click("click")}exact to = "/">Home</NavLink></li>
+					<li><NavLink to = "/Stuff">Stuff</NavLink></li>
+					<li><NavLink to = "/Contact">Contact</NavLink></li>
+						<li><NavLink to="/SignIn">Sign In</NavLink></li>
+						<li><NavLink to="/SignUp">Sign Up</NavLink></li>
+					</ul>
+				<div className = "content" >
+            		<Route exact path = "/" component = { Home }/>
+					<Route exact path = "/Stuff" component = { Stuff }/>
+					<Route exact path="/Contact" component={Contact} />
+					<Route exact path="/SignIn" component={SignIn} />
+					<Route exact path="/SignUp" component={SignUp}/>
 
-				<Route exact path = "/" component = { Home }/>
-				<Route exact path = "/Stuff" component = { Stuff }/>
-				<Route exact path = "/Contact" component = { Contact }/>
+				</div>
 			</div>
 
 			<Button onClick={() => clickedWhat()}>what?</Button>
