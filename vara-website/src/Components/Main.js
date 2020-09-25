@@ -21,7 +21,7 @@ class Main extends Component {
 						  <li><NavLink exact to = "/">Home</NavLink></li>
 						  <li><NavLink to = "/Stuff">Stuff</NavLink></li>
 						  <li><NavLink to = "/Contact">Contact</NavLink></li>
-						  <botton className="signup-btn"><NavLink to = "/SignUp">Sing Up</NavLink></botton>
+						  <button className="signup-btn"><NavLink to = "/SignUp">Sing Up</NavLink></button>
 					  </div>
 				 </ul>
 
