@@ -3,12 +3,15 @@ import "../Not_Used/App.css";
 
 function Footer() {
     return (
-		<div className = "App">
-        	<header className = "">
-        	<p> Footer Goes Here </p>
-			</header>
+		<div className="footer-container">
+        	<section className="">
+        	<p className=""> this is the fotter</p>
+			<div class="App"><img src="/static/media/vara_tagline.png" alt=""/></div>
+			
+			</section>
 		</div>
     );
 }
 
-export default Footer;
+export default Footer
+
