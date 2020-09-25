@@ -1,9 +1,9 @@
- body {
+/* body {
 	background-color: black;
 	color:blue;
 	padding: 20px;
 	margin: 0;
-}
+}*/
 
 h1,
 h2,
@@ -34,9 +34,9 @@ a {
 }
 
 .logo {
-	margin-top: 16px;
+	/* margin-top: 16px;
 	margin-left: 249px;
-    margin-right: 265px;
+    margin-right: 265px; */
 }
 
 .menu-items {
