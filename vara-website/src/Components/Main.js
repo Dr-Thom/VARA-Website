@@ -34,12 +34,13 @@ constructor(props){
 						  <li><NavLink exact to = "/">Home</NavLink></li>
 						  <li><NavLink to = "/Stuff">Stuff</NavLink></li>
 						  <li><NavLink to = "/Contact">Contact</NavLink></li>
-						  <botton className="signup-btn"><NavLink to = "/SignUp">Sing Up</NavLink></botton>
+						  <li><NavLink to = "/SignIn">Sign In</NavLink></li>
+						  <li><NavLink to = "/SignUp">Sign Up</NavLink></li>
 					  </div>
 				 </ul>
 
 				<div className = "content" >
-          <Route exact path = "/Home" component = { Home }/>
+          			<Route exact path = "/Home" component = { Home }/>
 					<Route exact path = "/Stuff" component = { Stuff }/>
 					<Route exact path="/Contact" component={ Contact } />
 					<Route exact path="/SignIn" component={ SignIn } />
