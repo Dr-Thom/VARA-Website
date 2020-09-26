@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+//import { firebase_init } from "./../firebase_init";
+import * as firebase from "firebase/app";
+//import { Firebase } from "./firebase";
 
 import Home from "./Home";
 import Stuff from "./Stuff";
@@ -16,6 +19,18 @@ class Main extends Component {
 
 constructor(props){
 	super(props);
+// 	const firebase = require("firebase");
+// // Required for side-effects
+// 	require("firebase/firestore");
+// 	firebase.initializeApp({
+//   		apiKey: '### FIREBASE API KEY ###',
+//   		authDomain: '### FIREBASE AUTH DOMAIN ###',
+//   		projectId: '### CLOUD FIRESTORE PROJECT ID ###'
+// 	});
+//
+// 	var db = firebase.firestore();
+	//console.log(firebaseConfig);
+
 	//this.click = this.click.bind(this);
 }
 
