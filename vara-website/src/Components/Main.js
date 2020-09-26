@@ -4,6 +4,7 @@ import { Nav } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 //import { firebase_init } from "./../firebase_init";
 import * as firebase from "firebase/app";
+//import renderAuthButton from "./renderAuthButton";
 //import { Firebase } from "./firebase";
 
 import Home from "./Home";
@@ -35,7 +36,22 @@ constructor(props){
 }
 
     render() {
-
+		let isLoggedIn : boolean = false;
+	    const renderAuthButton = ()=>{
+	   	if(isLoggedIn){
+	   			//return <li><NavLink to = "/SignUp">Login</NavLink></li>
+				return (
+				<NavLink to = "/Stuff">
+					<button>Logout</button>
+				</NavLink>);
+			} else {
+	   			//return <li><NavLink to = "/SignUp">Logout</NavLink></li>
+				return (
+				<NavLink to = "/Stuff">
+					<button>Login</button>
+				</NavLink>);
+	   		}
+	   	}
 		  const callbackFunc = () => {
 				clickedWhat();
 			}
@@ -45,12 +61,14 @@ constructor(props){
         <div className="content">
 				  < ul className = "Header">
 					  <div className="menu-items">
-						  <img onClick={() => click("click")} className="nav-logo" src = { VaraCar } alt = ""/>
-						  <li><NavLink exact to = "/">Home</NavLink></li>
-						  <li><NavLink to = "/Stuff">Stuff</NavLink></li>
-						  <li><NavLink to = "/Contact">Contact</NavLink></li>
-						  <li><NavLink to = "/SignIn">Sign In</NavLink></li>
-						  <li><NavLink to = "/SignUp">Sign Up</NavLink></li>
+						<img onClick={() => click("click")} className="nav-logo" src = { VaraCar } alt = ""/>
+						<li><NavLink exact to = "/">Home</NavLink></li>
+						<li><NavLink to = "/Stuff">Stuff</NavLink></li>
+						<li><NavLink to = "/Contact">Contact</NavLink></li>
+						<li><NavLink to = "/SignIn">Sign In</NavLink></li>
+						<li><NavLink to = "/SignUp">Sign Up</NavLink></li>
+
+						{renderAuthButton()}
 					  </div>
 				 </ul>
 
@@ -60,6 +78,9 @@ constructor(props){
 					<Route exact path="/Contact" component={ Contact } />
 					<Route exact path="/SignIn" component={ SignIn } />
 					<Route exact path="/SignUp" component={ SignUp }/>
+
+
+
 				</div>
 			</div>
 
@@ -69,10 +90,15 @@ constructor(props){
 			</HashRouter>
         );
     }
+	//<Route exact path={renderAuthButton}component={  }/>
+//<!--{renderAuthButton(isLoggedIn)}-->
 
 
 
+	}
 
+	function clickedLogout(){
+		return
 	}
 	function clickedWhat(){
 		alert("clicked on What? Button");
