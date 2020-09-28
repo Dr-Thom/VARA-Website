@@ -2,10 +2,15 @@ import React, { Component } from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+//import {VaraSupport } from "../Images/vara_support.png";
 //import { firebase_init } from "./../firebase_init";
 import * as firebase from "firebase/app";
 //import renderAuthButton from "./renderAuthButton";
 //import { Firebase } from "./firebase";
+
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import 'sweetalert2/src/sweetalert2.scss'
 
 import Home from "./Home";
 import Stuff from "./Stuff";
@@ -16,10 +21,13 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
 class Main extends Component {
-
+  //varaSupport = "../Images/vara_support.png";
+//ip : String = "0.0.0.0";
 
 constructor(props){
 	super(props);
+	//console.log(props);
+	//varaSupport
 // 	const firebase = require("firebase");
 // // Required for side-effects
 // 	require("firebase/firestore");
@@ -100,8 +108,40 @@ constructor(props){
 	function clickedLogout(){
 		return
 	}
+
 	function clickedWhat(){
-		alert("clicked on What? Button");
+		const ipAPI = '//api.ipify.org?format=json'
+
+		const inputValue = fetch(ipAPI)
+  			.then(response => response.json())
+  			.then(data => data.ip)
+
+		const { value: ipAddress } = Swal.fire({
+  			title: 'Enter your IP address',
+  			input: 'text',
+  			inputValue: inputValue,
+  			showCancelButton: true,
+  			inputValidator: (value) => {
+				//ip = value;
+    		if (!value) {
+      			return 'You need to write something!'
+  			} else {
+	  			Swal.fire(`Your IP address is ${value}`);
+  			}
+  		}
+	})
+if (ipAddress) {
+	 Swal.fire(`Your IP address is ${ipAddress}`);
+			// Swal.fire({
+  			// 	title: 'Hello!',
+  			// 	text: 'Do you want to continue',
+  			// 	// imageUrl: "../Images/vara_support.png",
+			// 	// imageWidth: 64,
+			// 	// imageHeight: 64,
+  			// 	confirmButtonText: 'Yes'
+			// });
+		}
+		//alert("clicked on What? Button");
 	}
  	function click (selected : string) {
 			alert("wuz up " + selected);
