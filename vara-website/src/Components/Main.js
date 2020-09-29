@@ -110,6 +110,7 @@ constructor(props){
 	}
 
 	function clickedWhat(){
+//(async () => {
 		const ipAPI = '//api.ipify.org?format=json'
 
 		const inputValue = fetch(ipAPI)
@@ -117,6 +118,7 @@ constructor(props){
   			.then(data => data.ip)
 
 		const { value: ipAddress } = Swal.fire({
+		//const { value: ipAddress } = await Swal.fire({
   			title: 'Enter your IP address',
   			input: 'text',
   			inputValue: inputValue,
@@ -141,6 +143,7 @@ if (ipAddress) {
   			// 	confirmButtonText: 'Yes'
 			// });
 		}
+	//});
 		//alert("clicked on What? Button");
 	}
  	function click (selected : string) {
