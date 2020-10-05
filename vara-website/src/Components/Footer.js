@@ -6,12 +6,11 @@ function Footer() {
 		<div className="footer-container">
         	<section className="">
         	<p className=""> this is the fotter</p>
-			<div class="App"><img src="/static/media/vara_tagline.png" alt=""/></div>
-			
+			<div className="App"><img src="/static/media/vara_tagline.png" alt=""/></div>
+
 			</section>
 		</div>
     );
 }
 
 export default Footer
-

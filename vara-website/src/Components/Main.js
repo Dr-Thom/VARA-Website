@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Nav } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Nav, Button } from "react-bootstrap";
+//import { Button } from "react-bootstrap";
 //import {VaraSupport } from "../Images/vara_support.png";
 //import { firebase_init } from "./../firebase_init";
 import * as firebase from "firebase/app";
@@ -20,12 +20,14 @@ import VaraName from "../Images/vara_name.png";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
-class Main extends Component {
+let isLoggedIn : boolean;
+
+function Main() {
   //varaSupport = "../Images/vara_support.png";
 //ip : String = "0.0.0.0";
 
-constructor(props){
-	super(props);
+// constructor(props){
+// 	super(props);
 	//console.log(props);
 	//varaSupport
 // 	const firebase = require("firebase");
@@ -41,23 +43,25 @@ constructor(props){
 	//console.log(firebaseConfig);
 
 	//this.click = this.click.bind(this);
-}
+//}
 
-    render() {
-		let isLoggedIn : boolean = false;
-	    const renderAuthButton = ()=>{
-	   	if(isLoggedIn){
+//    render() {
+		//let isLoggedIn : boolean;
+	    const renderAuthButton = (logged : boolean)=>{
+	   	if(logged){
 	   			//return <li><NavLink to = "/SignUp">Login</NavLink></li>
+				this.isLoggedIn = true;
 				return (
 				<NavLink to = "/Stuff">
 					<button>Logout</button>
 				</NavLink>);
 			} else {
 	   			//return <li><NavLink to = "/SignUp">Logout</NavLink></li>
+				isLoggedIn = false;
 				return (
-				<NavLink to = "/Stuff">
-					<button>Login</button>
-				</NavLink>);
+						<NavLink to = "/Stuff">
+							<button>Login</button>
+						</NavLink>);
 	   		}
 	   	}
 		  const callbackFunc = () => {
@@ -76,7 +80,7 @@ constructor(props){
 						<li><NavLink to = "/SignIn">Sign In</NavLink></li>
 						<li><NavLink to = "/SignUp">Sign Up</NavLink></li>
 
-						{renderAuthButton()}
+						{renderAuthButton(isLoggedIn)}
 					  </div>
 				 </ul>
 
@@ -90,14 +94,15 @@ constructor(props){
 
 
 				</div>
-			</div>
 
+			</div>
+			<p>{ isLoggedIn }</p>
 			<Button onClick={() => clickedWhat()}>what?</Button>
 
-			<button class="btn btn-danger" onClick={() => click("click")}>what2</button>
+			<button className="btn btn-danger" onClick={() => click("click")}>what2</button>
 			</HashRouter>
         );
-    }
+    //}
 	//<Route exact path={renderAuthButton}component={  }/>
 //<!--{renderAuthButton(isLoggedIn)}-->
 
@@ -128,7 +133,7 @@ constructor(props){
     		if (!value) {
       			return 'You need to write something!'
   			} else {
-	  			Swal.fire(`Your IP address is ${value}`);
+	  			Swal.fire(` ${isLoggedIn} Your IP address is ${value}`);
   			}
   		}
 	})
