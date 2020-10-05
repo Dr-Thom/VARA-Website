@@ -23,6 +23,7 @@ import SignUp from "./SignUp";
 let isLoggedIn : boolean;
 
 function Main() {
+
   //varaSupport = "../Images/vara_support.png";
 //ip : String = "0.0.0.0";
 
@@ -96,7 +97,7 @@ function Main() {
 				</div>
 
 			</div>
-			<p>{ isLoggedIn }</p>
+			<p>{() => isLoggedIn}</p>
 			<Button onClick={() => clickedWhat()}>what?</Button>
 
 			<button className="btn btn-danger" onClick={() => click("click")}>what2</button>
